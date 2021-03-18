@@ -1,0 +1,12 @@
+.navUl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.navUl li {
+  padding: 10px;
+}
+.navMainDiv {
+  background-color: rgb(139, 129, 36);
+}
