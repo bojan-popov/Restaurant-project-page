@@ -9,19 +9,19 @@ function Nav() {
       <div className="navMainDiv">
         <ul className="navUl">
           <Link to="/">
-            <li>Home</li>
+            <li className="navUnderline">Home</li>
           </Link>
           <Link to="/about">
-            <li>About</li>
+            <li className="navUnderline">About</li>
           </Link>
           <Link to="/menu">
-            <li>Menu</li>
+            <li className="navUnderline">Menu</li>
           </Link>
           <Link to="/contact">
-            <li>Contact</li>
+            <li className="navUnderline">Contact</li>
           </Link>
           <Link to="/location">
-            <li>Location</li>
+            <li className="navUnderline">Location</li>
           </Link>
         </ul>
       </div>
