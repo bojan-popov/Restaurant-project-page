@@ -8,13 +8,13 @@ function Nav() {
   const menuHandler = () => setMenu(!menu);
   const list = [
     <>
-      <Link to="#" key={1}>
+      <Link to="#" key="1">
         <li>What we offer</li>
       </Link>
-      <Link to="#" key={2}>
+      <Link to="#" key="2">
         <li>Order now</li>
       </Link>
-      <Link to="#" key={3}>
+      <Link to="#" key="3">
         <li>Contact us</li>
       </Link>
     </>,

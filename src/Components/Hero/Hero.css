@@ -1,6 +1,6 @@
 .hero-container {
   height: 100vh;
-  background-color: rgb(63, 3, 3, 0.7);
+  background-color: rgb(63, 3, 3, 0.5);
 }
 .hero-image {
   position: relative;
@@ -8,21 +8,21 @@
 .hero-image img {
   object-fit: cover;
   object-position: center;
-  height: 80vh;
-  width: 100vw;
+  height: 90vh;
+  width: 100%;
 }
 .hero-header {
   position: absolute;
-  top: 70vh;
+  top: 80vh;
   left: 0%;
   width: 100%;
-  color: rgb(233, 211, 18);
   display: flex;
   align-items: center;
   justify-content: flex-end;
   background-color: rgb(146, 135, 34, 0.8);
   color: black;
   box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.5);
+  z-index: 9999;
 }
 .hero-header h1 {
   display: flex;
@@ -30,9 +30,10 @@
   justify-content: center;
   text-align: center;
   width: 45vw;
-  height: 300px;
+  height: calc(200px + (300px - 200px) * ((100vh - 200px) / (100vh - 200px)));
   position: relative;
   padding: 20px;
+  font-size: calc(14px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 .hero-header h1:before {
   content: "";
@@ -52,36 +53,7 @@
   text-align: center;
   margin-left: 10px;
   width: 45vw;
-  height: 300px;
+  height: calc(200px + (300px - 200px) * ((100vh - 200px) / (100vh - 200px)));
   padding: 20px;
-}
-@media screen and (max-width: 1250px) {
-  .hero-header h1 {
-    font-size: 28px;
-  }
-}
-@media screen and (max-width: 850px) {
-  .hero-header h1 {
-    font-size: 20px;
-    height: 30vh;
-  }
-  .hero-header h2 {
-    font-size: 18px;
-    height: 30vh;
-  }
-}
-@media screen and (max-width: 650px) {
-  .hero-header h1 {
-    height: 30vh;
-    width: 50%;
-  }
-  .hero-header h2 {
-    height: 30vh;
-    width: 50%;
-  }
-  .hero-header {
-    transform: translate(0%);
-    left: 0%;
-    width: 100%;
-  }
+  font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
