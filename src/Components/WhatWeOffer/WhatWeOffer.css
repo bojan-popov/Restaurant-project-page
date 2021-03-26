@@ -1,0 +1,24 @@
+.wwo-main {
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  position: relative;
+}
+.wwo-main h3 {
+  position: absolute;
+  top: 10vh;
+  left: 60vw;
+  font-size: 28px;
+  width: 30vw;
+  text-align: end;
+}
+.wwo-main h3:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
