@@ -1,7 +1,7 @@
 .wwo-main {
   color: white;
-  height: 400vh;
   background-color: black;
+  height: 500vh;
   position: relative;
 }
 .wwo-main h3 {
@@ -32,9 +32,10 @@
 }
 .items-container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
   width: 100%;
+  position: relative;
 }
 .items-header {
   width: 100%;
@@ -45,10 +46,9 @@
   margin-left: 10px;
 }
 .items {
-  flex: 30%;
   color: black;
   background-color: white;
-  width: 100px;
+  width: 30%;
   height: 500px;
 }
 .read-more {
@@ -59,6 +59,57 @@
 .read-more h4 {
   background-color: brown;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin: 10px;
+  color: white;
+  background-color: black;
+  box-shadow: 2px 2px 2px 0 rgb(255, 255, 255, 0.5);
+}
+.items h5 {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: red;
+  background-color: white;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.items img {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+  box-shadow: 2px 2px 2px 0 rgb(255, 255, 255, 0.5);
+}
+.items p {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  text-align: center;
+}
+.items h6 {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  color: red;
+  font-size: 18px;
+  background-color: white;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
