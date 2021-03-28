@@ -8,9 +8,9 @@ function Nav() {
   const menuHandler = () => setMenu(!menu);
   const list = [
     <>
-      <Link to="#" key="1">
+      <a href="#wwo" key="1">
         <li>What we offer</li>
-      </Link>
+      </a>
       <Link to="#" key="2">
         <li>Order now</li>
       </Link>
@@ -29,10 +29,12 @@ function Nav() {
               <FaBars onClick={menuHandler} />
             </div>
           </div>
-          <ul className="nav-list">{list}</ul>
+          <ul className="nav-list" onClick={menuHandler}>
+            {list}
+          </ul>
         </nav>
       </div>
-      <div className={menu ? "active" : ""}>
+      <div className={menu ? "active" : ""} onClick={menuHandler}>
         <ul className="burger-list">{list}</ul>
       </div>
     </>

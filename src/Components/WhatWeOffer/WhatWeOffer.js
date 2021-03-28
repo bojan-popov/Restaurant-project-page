@@ -5,7 +5,7 @@ import { Salat, Main, Dessert } from "./WhatWeOfferData";
 function WhatWeOffer(props) {
   return (
     <>
-      <div className="wwo-main">
+      <div className="wwo-main" id="wwo">
         <h3>What we offer:</h3>
         <div className="wwo-container">
           <div className="items-header">
@@ -22,9 +22,6 @@ function WhatWeOffer(props) {
                 </div>
               );
             })}
-          </div>
-          <div className="read-more">
-            <h4>More ...</h4>
           </div>
         </div>
         <div className="wwo-container">
@@ -43,9 +40,6 @@ function WhatWeOffer(props) {
               );
             })}
           </div>
-          <div className="read-more">
-            <h4>More ...</h4>
-          </div>
         </div>
         <div className="wwo-container">
           <div className="items-header">
@@ -62,9 +56,6 @@ function WhatWeOffer(props) {
                 </div>
               );
             })}
-          </div>
-          <div className="read-more">
-            <h4>More ...</h4>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@
   background-color: rgb(146, 135, 34, 0.8);
   color: black;
   box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.5);
-  z-index: 9999;
+  z-index: 9;
 }
 .hero-header h1 {
   display: flex;

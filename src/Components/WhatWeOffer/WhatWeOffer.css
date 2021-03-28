@@ -1,7 +1,7 @@
 .wwo-main {
   color: white;
   background-color: black;
-  height: 500vh;
+  height: 300vh;
   position: relative;
 }
 .wwo-main h3 {
@@ -36,6 +36,8 @@
   align-items: center;
   width: 100%;
   position: relative;
+  padding-bottom: 15px;
+  box-shadow: 2px 2px 2px 0 rgb(255, 255, 255, 0.5);
 }
 .items-header {
   width: 100%;
@@ -46,22 +48,8 @@
   margin-left: 10px;
 }
 .items {
-  color: black;
-  background-color: white;
   width: 30%;
   height: 500px;
-}
-.read-more {
-  font-size: 22px;
-  width: 100%;
-  cursor: pointer;
-}
-.read-more h4 {
-  background-color: brown;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .items {
   display: flex;
@@ -114,3 +102,30 @@
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 1300px) {
+  .items h5 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .items h5 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .items-container {
+    flex-direction: column;
+  }
+  .items {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .items h5 {
+    font-size: 16px;
+  }
+  .items img {
+    width: 150px;
+    height: 150px;
+  }
+} ;
