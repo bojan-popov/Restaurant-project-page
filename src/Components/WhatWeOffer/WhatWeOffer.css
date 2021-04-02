@@ -1,34 +1,35 @@
 .wwo-main {
-  color: white;
-  background-color: black;
-  height: 300vh;
+  color: black;
+  background-color: rgba(228, 218, 250, 0.3);
+  height: auto;
   position: relative;
 }
 .wwo-main h3 {
-  position: absolute;
-  top: 10vh;
-  left: 60vw;
-  font-size: calc(10px + (26px - 10px) * ((100vw - 300px) / (1600 - 300)));
-  width: 30vw;
-  text-align: end;
+  font-size: calc(14px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));
+  width: 30vh;
+  padding-top: 100px;
+  padding-left: 20px;
 }
 .wwo-main h3:after {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
-  background-color: white;
+  background-color: black;
 }
 .wwo-container {
   position: relative;
-  top: 20vh;
-  background-color: rgb(146, 135, 34);
+  margin-bottom: 20vh;
+  margin-top: 20vh;
+  background-color: rgba(228, 218, 250, 1);
   display: flex;
   width: 80vw;
   margin: 10vh 10vw;
   align-items: center;
   justify-items: center;
   flex-direction: column;
+  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
 }
 .items-container {
   display: flex;
@@ -45,7 +46,8 @@
   align-items: center;
   justify-items: start;
   font-size: 22px;
-  margin-left: 10px;
+  padding-left: 30px;
+  padding-top: 10px;
 }
 .items {
   width: 30%;

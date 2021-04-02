@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import "./Nav.css";
+
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
+import "./Nav.css";
 
 function Nav() {
   const [menu, setMenu] = useState(false);

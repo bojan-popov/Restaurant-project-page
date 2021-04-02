@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./Hero.css";
 import food from "./img/background-food2.png";
 

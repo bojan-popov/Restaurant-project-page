@@ -1,6 +1,10 @@
 import React from "react";
-import "./WhatWeOffer.css";
+import { connect } from "react-redux";
+
 import { Salat, Main, Dessert } from "./WhatWeOfferData";
+
+import "./WhatWeOffer.css";
+import { fetchMealsAsync } from "../../redux/meals/action";
 
 function WhatWeOffer(props) {
   return (
@@ -62,5 +66,12 @@ function WhatWeOffer(props) {
     </>
   );
 }
+const mapStateToProps = (state) => ({
+  meals: state.meals.meals,
+});
 
-export default WhatWeOffer;
+const mapDispatchToProps = (dispatch) => ({
+  fetchMeals: () => dispatch(fetchMealsAsync()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(WhatWeOffer);
