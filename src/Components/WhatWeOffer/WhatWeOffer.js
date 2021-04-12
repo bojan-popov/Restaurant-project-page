@@ -1,77 +1,63 @@
-import React from "react";
+import React, { Component } from "react";
+
 import { connect } from "react-redux";
-
-import { Salat, Main, Dessert } from "./WhatWeOfferData";
-
+import { mealsData } from "../../actions";
+import WwoList from "./WwoList";
 import "./WhatWeOffer.css";
-import { fetchMealsAsync } from "../../redux/meals/action";
 
-function WhatWeOffer(props) {
-  return (
-    <>
-      <div className="wwo-main" id="wwo">
-        <h3>What we offer:</h3>
-        <div className="wwo-container">
-          <div className="items-header">
-            <h4>Starters ...</h4>
+class WhatWeOffer extends Component {
+  state = { type: "all" };
+
+  componentDidMount() {
+    this.props.mealsData();
+  }
+
+  onClickHandler = (type) => {
+    switch (type) {
+      case "salad":
+        return this.setState({ type: "salad" });
+      case "main":
+        return this.setState({ type: "main" });
+      case "dessert":
+        return this.setState({ type: "dessert" });
+      case "all":
+        return this.setState({ type: "all" });
+      default:
+        return this.setState({ type: "all" });
+    }
+  };
+
+  render() {
+    return (
+      <div id="wwo">
+        <div className="header-wwo">
+          <h3>What we offer :</h3>
+        </div>
+        <div className="button-container">
+          <div onClick={() => this.onClickHandler("all")} className="button">
+            All meals
           </div>
-          <div className="items-container">
-            {Salat.map((item) => {
-              return (
-                <div className="items">
-                  <h5>{item.title} </h5>
-                  <img src={item.image} alt="salat" />
-                  <p>{item.description}</p>
-                  <h6>{item.price}</h6>
-                </div>
-              );
-            })}
+          <div onClick={() => this.onClickHandler("salad")} className="button">
+            Salad meals
+          </div>
+          <div onClick={() => this.onClickHandler("main")} className="button">
+            Main meals
+          </div>
+          <div
+            onClick={() => this.onClickHandler("dessert")}
+            className="button"
+          >
+            Dessert meals
           </div>
         </div>
-        <div className="wwo-container">
-          <div className="items-header">
-            <h4>Main course ...</h4>
-          </div>
-          <div className="items-container">
-            {Main.map((item) => {
-              return (
-                <div className="items">
-                  <h5>{item.title} </h5>
-                  <img src={item.image} alt="main" />
-                  <p>{item.description}</p>
-                  <h6>{item.price}</h6>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <div className="wwo-container">
-          <div className="items-header">
-            <h4>Deserts ...</h4>
-          </div>
-          <div className="items-container">
-            {Dessert.map((item) => {
-              return (
-                <div className="items">
-                  <h5>{item.title} </h5>
-                  <img src={item.image} alt="dessert" />
-                  <p>{item.description}</p>
-                  <h6>{item.price}</h6>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        <WwoList type={this.state.type} elements={this.props.meals}></WwoList>
       </div>
-    </>
-  );
+    );
+  }
 }
-const mapStateToProps = (state) => ({
-  meals: state.meals.meals,
-});
 
-const mapDispatchToProps = (dispatch) => ({
-  fetchMeals: () => dispatch(fetchMealsAsync()),
-});
+const mapStateToProps = (state) => {
+  return { meals: state.meals };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(WhatWeOffer);
+export default connect(mapStateToProps, { mealsData })(WhatWeOffer);

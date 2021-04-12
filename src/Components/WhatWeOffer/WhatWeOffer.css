@@ -1,133 +1,48 @@
-.wwo-main {
+/* WWO css */
+
+.header-wwo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+}
+.button {
   color: black;
-  background-color: rgba(228, 218, 250, 0.3);
-  height: auto;
-  position: relative;
-}
-.wwo-main h3 {
-  font-size: calc(14px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));
-  width: 30vh;
-  padding-top: 100px;
-  padding-left: 20px;
-}
-.wwo-main h3:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: black;
-}
-.wwo-container {
-  position: relative;
-  margin-bottom: 20vh;
-  margin-top: 20vh;
-  background-color: rgba(228, 218, 250, 1);
-  display: flex;
-  width: 80vw;
-  margin: 10vh 10vw;
-  align-items: center;
-  justify-items: center;
-  flex-direction: column;
-  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-}
-.items-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  position: relative;
-  padding-bottom: 15px;
-  box-shadow: 2px 2px 2px 0 rgb(255, 255, 255, 0.5);
-}
-.items-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-items: start;
-  font-size: 22px;
-  padding-left: 30px;
-  padding-top: 10px;
-}
-.items {
-  width: 30%;
-  height: 500px;
-}
-.items {
+  background-color: #c3b8d1;
+  width: 150px;
+  height: 50px;
+  margin: 15px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  position: relative;
-  margin: 10px;
-  color: white;
-  background-color: black;
-  box-shadow: 2px 2px 2px 0 rgb(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.3);
 }
-.items h5 {
-  font-size: 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: red;
-  background-color: white;
-  width: 80%;
+.button:hover {
+  transition: 0.4s ease-in-out;
+  background-color: rgba(103, 103, 201, 0.7);
+  box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.7);
+}
+.button-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.items img {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 200px;
+
+/* WwoList css */
+
+.list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-description {
   height: 200px;
-  object-fit: contain;
-  object-position: center;
-  box-shadow: 2px 2px 2px 0 rgb(255, 255, 255, 0.5);
 }
-.items p {
-  position: absolute;
-  top: 60%;
-  left: 10%;
-  text-align: center;
-}
-.items h6 {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  color: red;
-  font-size: 18px;
-  background-color: white;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media screen and (max-width: 1300px) {
-  .items h5 {
-    font-size: 26px;
-  }
-}
-@media screen and (max-width: 1150px) {
-  .items h5 {
-    font-size: 22px;
-  }
-}
-@media screen and (max-width: 950px) {
-  .items-container {
-    flex-direction: column;
-  }
-  .items {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 350px) {
-  .items h5 {
-    font-size: 16px;
-  }
-  .items img {
-    width: 150px;
-    height: 150px;
-  }
-} ;
