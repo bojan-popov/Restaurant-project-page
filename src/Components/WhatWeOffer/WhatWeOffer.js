@@ -9,7 +9,9 @@ class WhatWeOffer extends Component {
   state = { type: "all" };
 
   componentDidMount() {
-    this.props.mealsData();
+    if (this.props.meals.length === 0) {
+      return this.props.mealsData();
+    } else return null;
   }
 
   onClickHandler = (type) => {
@@ -29,7 +31,7 @@ class WhatWeOffer extends Component {
 
   render() {
     return (
-      <div id="wwo">
+      <div id="wwo" className="wwo-container">
         <div className="header-wwo">
           <h3>What we offer :</h3>
         </div>

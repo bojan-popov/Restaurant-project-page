@@ -12,3 +12,23 @@ export const mealsData = () => async (dispatch) => {
 
   dispatch({ type: "FETCH_MEALS", payload: result.data.meals });
 };
+
+export const orderNowData = (id) => {
+  return { type: "GET_MEAL_INFO", payload: id };
+};
+
+export const addOrderCounter = (id) => {
+  return { type: "ADD_MEAL_COUNTER", payload: id };
+};
+
+export const reduceOrderCounter = (id) => {
+  return { type: "REDUCE_MEAL_COUNTER", payload: id };
+};
+
+export const deleteOrder = (id) => {
+  return { type: "DELETE_ORDER", payload: id };
+};
+
+export const deleteOrders = () => {
+  return { type: "DELETE_ORDERS" };
+};

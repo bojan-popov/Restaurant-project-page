@@ -1,16 +1,57 @@
 import React, { Component } from "react";
+import imageFiles from "./WhatWeOfferImageData";
+import { Link } from "react-router-dom";
 
-export default class WwoList extends Component {
+import { connect } from "react-redux";
+import { orderNowData } from "../../actions";
+import OrderNow from "../OrderNow/OrderNow";
+
+class WwoList extends Component {
+  getIMagePath = (image) => {
+    let imagePath = null;
+    imageFiles.map((im) => {
+      if (im[image]) {
+        imagePath = im[image];
+        return null;
+      }
+      return null;
+    });
+
+    return <img src={imagePath} alt={image}></img>;
+  };
+
+  infoButton = (item) => {
+    return <Link to="/offers/meal"></Link>;
+  };
+
+  onClickHandler = (item) => {
+    return this.props.orderNowData(item.id);
+  };
   renderList = (item) => {
-    console.log(item);
     return (
       <div className="list-container" key={item.id}>
-        <div>
-          <div className="list-title">
-            <h4>{item.title} </h4>
+        <div className="list-inner-container">
+          <div className="list-image">
+            <div
+              onClick={() => this.infoButton(item)}
+              className="list-side-text"
+            >
+              Click for more info
+            </div>
+            <div className="list-title">
+              <h4>{item.title} </h4>
+            </div>
+            {this.getIMagePath(item.image)}
+            <div className="list-footer">
+              <div className="list-price">{item.price} $</div>
+              <div
+                className="button-list border-button"
+                onClick={() => this.onClickHandler(item)}
+              >
+                Order {this.props.orders.id}
+              </div>
+            </div>
           </div>
-          <div className="list-description">{item.description}</div>
-          <div className="list-price">{item.price}</div>
         </div>
       </div>
     );
@@ -45,6 +86,19 @@ export default class WwoList extends Component {
   };
 
   render() {
-    return <div>{this.renderMainList()}</div>;
+    return (
+      <div>
+        <div className="wwo-container">{this.renderMainList()}</div>
+        <OrderNow />
+      </div>
+    );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    orders: state.orders,
+  };
+};
+
+export default connect(mapStateToProps, { orderNowData })(WwoList);

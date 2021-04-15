@@ -1,0 +1,38 @@
+/* rendering on screen if there are no orders selected */
+
+.order-menu {
+  padding-top: 40vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.order-header {
+  margin: 30px;
+}
+.order-para {
+  padding-bottom: 20px;
+}
+.order-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* rendering on screen if there are orders selected */
+
+.orders-header {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  width: 60%;
+  margin: auto;
+}
+.orders-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  margin: auto;
+  padding-left: 15px;
+}

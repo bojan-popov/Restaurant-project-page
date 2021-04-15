@@ -14,7 +14,7 @@ function Nav() {
       <div className="nav-container">
         <nav className="nav">
           <div className="logo">
-            <a href="#hero">Sheff Paradise</a>
+            <Link to="/">Sheff Paradise</Link>
           </div>
           <div className="nav-burger">
             <div className="burger-icon">
@@ -22,13 +22,10 @@ function Nav() {
             </div>
           </div>
           <ul className="nav-list" onClick={menuHandler}>
-            <a href="#wwo">
+            <Link to="/offers">
               <li>What we offer</li>
-            </a>
-            <Link to="#">
-              <li>Order now</li>
             </Link>
-            <Link to="#">
+            <Link to="/contact">
               <li>Contact us</li>
             </Link>
           </ul>
@@ -36,13 +33,11 @@ function Nav() {
       </div>
       <div className={menu ? "active" : ""} onClick={menuHandler}>
         <ul className="burger-list">
-          <a href="#wwo">
+          <Link to="/offers">
             <li>What we offer</li>
-          </a>
-          <Link to="#">
-            <li>Order now</li>
           </Link>
-          <Link to="#">
+
+          <Link to="/contact">
             <li>Contact us</li>
           </Link>
         </ul>

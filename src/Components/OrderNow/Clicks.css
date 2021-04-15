@@ -1,0 +1,22 @@
+.order-clicks {
+  padding-top: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.list-of-orders {
+  background-color: red;
+}
+.order-lists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+.delete {
+  padding-top: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

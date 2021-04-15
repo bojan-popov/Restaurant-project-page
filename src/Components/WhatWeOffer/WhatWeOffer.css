@@ -4,19 +4,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 50px;
+  width: 100%;
+  padding-top: 10vh;
+  text-align: center;
 }
 .button {
   color: black;
   background-color: #c3b8d1;
-  width: 150px;
+  width: 250px;
   height: 50px;
   margin: 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding-top: 5px;
+  overflow: hidden;
   border-radius: 10px;
   box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.3);
 }
@@ -30,19 +34,119 @@
   align-items: center;
   justify-content: center;
 }
-
+.border-button {
+  border-top: rgba(0, 0, 0, 0.7) 1px solid;
+  border-left: rgba(0, 0, 0, 0.7) 1px solid;
+}
+@media screen and (max-width: 800px) {
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 300px[col-start]);
+  }
+  .button {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .button-container {
+    grid-template-columns: repeat(2, 200px[col-start]);
+  }
+}
+@media screen and (max-width: 400px) {
+  .button-container {
+    grid-template-columns: repeat(2, 100px[col-start]);
+  }
+  .button {
+    font-size: 14px;
+  }
+}
 /* WwoList css */
+.wwo-container {
+  padding-bottom: 8vh;
+}
+.button-list {
+  color: black;
+  background-color: #c3b8d1;
+  width: 150px;
+  height: 50px;
+  margin: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.button-list:hover {
+  transition: 0.4s ease-in-out;
+  background-color: rgba(103, 103, 201, 0.7);
+  box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.7);
+}
 
 .list-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 10px;
+}
+.list-inner-container {
+  width: 80%;
+  margin: auto;
 }
 .list-title {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 10px;
 }
-.list-description {
-  height: 200px;
+.list-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #dacdeb;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.list-side-text {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 100px;
+  text-align: center;
+  background-color: rgb(131, 35, 35, 0.7);
+  cursor: pointer;
+  border-radius: 10px;
+}
+.list-side-text:hover {
+  transition: 0.4s ease-in-out;
+  background-color: rgba(146, 20, 20, 1);
+  box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, 0.7);
+}
+.list-image img {
+  object-fit: contain;
+  border-radius: 10px;
+}
+.list-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 700px) {
+  .list-container {
+    width: 100%;
+    margin: 0;
+  }
+  .list-inner-container {
+    width: 100%;
+    margin: 0;
+  }
 }
