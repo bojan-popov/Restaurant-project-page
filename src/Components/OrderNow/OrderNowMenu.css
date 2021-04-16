@@ -1,7 +1,7 @@
 /* rendering on screen if there are no orders selected */
 
 .order-menu {
-  padding-top: 40vh;
+  padding-top: 25vh;
   text-align: center;
   display: flex;
   align-items: center;
@@ -10,6 +10,9 @@
 }
 .order-header {
   margin: 30px;
+}
+.orders-header h2 {
+  text-align: center;
 }
 .order-para {
   padding-bottom: 20px;
@@ -28,6 +31,11 @@
   width: 60%;
   margin: auto;
 }
+.orders-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .orders-container {
   display: flex;
   align-items: center;
@@ -35,4 +43,36 @@
   width: 80%;
   margin: auto;
   padding-left: 15px;
+}
+.orders-buttons {
+  background-color: rgba(228, 218, 250, 0.8);
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+}
+.orders-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-spacing {
+  padding-bottom: 10vh;
+}
+.border {
+  border-bottom: black solid 1px;
+}
+
+@media screen and (max-width: 550px) {
+  .bottom-spacing {
+    padding-bottom: 20vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .orders-title-container {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .orders-title-container {
+    font-size: 10px;
+  }
 }

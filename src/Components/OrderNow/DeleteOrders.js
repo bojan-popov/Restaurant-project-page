@@ -7,8 +7,8 @@ import "./Clicks.css";
 class Delete extends Component {
   render() {
     return (
-      <div className="delete">
-        <h3>Transaction successfull</h3>
+      <div className="delete-orders">
+        <h2>Transaction successfull</h2>
         <div className="button" onClick={this.props.deleteOrders}>
           <Link to="/">OK</Link>
         </div>

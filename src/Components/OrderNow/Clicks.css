@@ -5,6 +5,9 @@
   justify-content: center;
   flex-direction: column;
 }
+.order-clicks h3 {
+  text-align: center;
+}
 .list-of-orders {
   background-color: red;
 }
@@ -14,9 +17,13 @@
   justify-content: center;
   padding-top: 10px;
 }
-.delete {
+.delete-orders {
   padding-top: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+.delete-orders h2 {
+  text-align: center;
 }

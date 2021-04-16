@@ -20,10 +20,6 @@ class WwoList extends Component {
     return <img src={imagePath} alt={image}></img>;
   };
 
-  infoButton = (item) => {
-    return <Link to="/offers/meal"></Link>;
-  };
-
   onClickHandler = (item) => {
     return this.props.orderNowData(item.id);
   };
@@ -32,11 +28,8 @@ class WwoList extends Component {
       <div className="list-container" key={item.id}>
         <div className="list-inner-container">
           <div className="list-image">
-            <div
-              onClick={() => this.infoButton(item)}
-              className="list-side-text"
-            >
-              Click for more info
+            <div className="list-side-text">
+              <Link to={`/info/${item.id}`}>Click for more info</Link>
             </div>
             <div className="list-title">
               <h4>{item.title} </h4>

@@ -15,8 +15,6 @@ class ReservationClicks extends Component {
     return this.props.meals.map((meal) => {
       return this.props.orders.map((order) => {
         if (meal.id === order.id) {
-          console.log(meal.price);
-          console.log(order.qty);
           return (
             <div key={meal.id}>
               <div className="order-lists">

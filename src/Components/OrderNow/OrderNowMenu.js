@@ -18,8 +18,7 @@ class OrderNowMenu extends Component {
             U have selected no meals from our menu.
           </h3>
           <p className="order-para">
-            Please select some meals from our menu if u wish to order meals from
-            our menu
+            Please select some meals from our menu if u wish to order meals
           </p>
           <div className="button order-button">
             <Link to="/offers">Our menu</Link>
@@ -28,12 +27,11 @@ class OrderNowMenu extends Component {
       );
     } else
       return (
-        <div>
+        <div className="bottom-spacing">
           <div className="orders-header">
             <h2>You have selected this meals:</h2>
           </div>
-          <OrderNowOrders orders={this.props.orders} meals={this.props.meals} />
-          <div className="button-container">
+          <div className="button-container orders-buttons">
             <div className="button">
               <Link to="confirmation1">Order online</Link>
             </div>
@@ -41,6 +39,7 @@ class OrderNowMenu extends Component {
               <Link to="confirmation2">Make reservation</Link>
             </div>
           </div>
+          <OrderNowOrders orders={this.props.orders} meals={this.props.meals} />
         </div>
       );
   }
